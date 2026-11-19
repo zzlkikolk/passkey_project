@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passkey Studio</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">PASSKEY / WEBAUTHN</div>
+      <h1>用一把设备密钥，<br><span>登录得更自然。</span></h1>
+      <p>这是一个基于浏览器原生 WebAuthn 的本地演示。私钥留在设备中，服务端只保存公开凭据。</p>
+      <div class="hero-note"><span class="pulse"></span> 本地安全上下文 · localhost</div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div><div class="label">身份配置</div><h2>开始体验</h2></div>
+        <div class="lock">⌁</div>
+      </div>
+      <label for="username">用户名</label>
+      <input id="username" autocomplete="username webauthn" placeholder="例如：zhangsan">
+      <label for="displayName">显示名称 <small>注册时使用</small></label>
+      <input id="displayName" autocomplete="name" placeholder="例如：张三">
+      <div class="actions">
+        <button id="register" class="primary">注册 Passkey <span>↗</span></button>
+        <button id="login" class="secondary">使用 Passkey 登录</button>
+      </div>
+      <div id="status" class="status idle">等待操作</div>
+    </section>
+
+    <footer><span>SPRING BOOT 2.3 · JAVA 11</span><span>MYSQL + REDIS</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
