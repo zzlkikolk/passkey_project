@@ -10,9 +10,6 @@
 
 ## 启动
 
-```bash
-/Users/zhangzhilin/App/apache-maven-3.9.0/bin/mvn spring-boot:run
-```
 
 打开 <http://localhost:8080>，输入用户名和显示名称后点击“注册 Passkey”，然后点击“使用 Passkey 登录”。需要在安全上下文中使用 WebAuthn，`localhost` 开发地址已满足浏览器要求。
 
