@@ -3,9 +3,14 @@ package com.example.passkey.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+/** 接收浏览器返回的 WebAuthn 注册结果。 */
 public class RegisterVerifyRequest {
+    /** 发起注册挑战时使用的用户名。 */
     public String username;
+    /** 浏览器凭据的 rawId，使用 Base64URL 编码。 */
     public String credentialId;
+    /** 浏览器生成的 clientDataJSON，使用 Base64URL 编码。 */
     public String clientDataJSON;
+    /** 浏览器生成的 attestationObject，使用 Base64URL 编码。 */
     public String attestationObject;
 }
